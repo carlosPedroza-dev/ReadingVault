@@ -5,8 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-
+@Setter @Getter @NoArgsConstructor @AllArgsConstructor 
 @Entity
 @Table(name="app_users")
 public class User {
@@ -17,39 +21,9 @@ public class User {
     @Column(name="user_email",unique=true)
    private String email;
 
-    @Column(name="user_password")
+    @Column(name="user_password",nullable=false)
    private String password;
     
-    public User(){}
-
-    public User(String email,String password){
-        this.email = email;
-        this.password = password;
-    }
-
-public void setId(Long id){
-    this.id = id;
-}
-
-public Long getId(){
-    return id;
-}
-
-   public void setEmail(String email){
-        this.email = email;
-    }
-
-    public void setPassword(String password){
-        this.password = password;
-    }
-
-public String getEmail(){
-    return email;
-}
-
-    public String getPassword(){
-        return password;
-    }
-
+   
     
 }
