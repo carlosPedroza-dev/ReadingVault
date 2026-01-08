@@ -10,7 +10,5 @@ import com.files.ReadingVaultBackEnd.Entities.User;
 
 @Repository
 interface  UserRepository extends JpaRepository<User,Long>{
-    Optional<User>findByid(Long id);
-    boolean existByemail(String email);
-    Optional<User> findByPassword(String password);
+
 }

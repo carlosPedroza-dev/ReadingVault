@@ -17,5 +17,4 @@ private LocalDateTime publicationDate;
 private Double price;
 private Itemtype type;
 private LocalDateTime createdAt;
-
 }
